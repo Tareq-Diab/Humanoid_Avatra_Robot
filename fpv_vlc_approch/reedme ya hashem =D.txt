@@ -1,0 +1,7 @@
+steps to get it working 
+*your laptop and phone must be on the same local network
+*open anaconda prompt (graduation project)and navigate to this folder in it
+*write python __init__.py #to start the script
+*on your phone open vlc and go to stream on the app tabs
+*it will ask you to enter a url , it must be : your_ip:5001/video_feed
+please replace your_ip with your laptop ip on the local router 
