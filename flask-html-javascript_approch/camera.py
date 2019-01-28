@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 
 class VideoCamera(object):
     def __init__(self):
@@ -6,8 +7,8 @@ class VideoCamera(object):
         self.video = cv2.VideoCapture(0)
         #self.video.set(cv2.cv.CV_CAP_PROP_FRAME_WIDTH, 620)
         #self.video.set(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, 480)
-        #self.video.set(cv2.CAP_PROP_FRAME_WIDTH, 160);
-        #self.video.set(cv2.CAP_PROP_FRAME_HEIGHT, 120);
+        self.video.set(cv2.CAP_PROP_FRAME_WIDTH, 320);
+        self.video.set(cv2.CAP_PROP_FRAME_HEIGHT, 1000);
         
 
 
@@ -17,10 +18,11 @@ class VideoCamera(object):
     
     def get_frame(self):
         success, image = self.video.read()
+        numpy_horizontal_concat = np.concatenate((image, image), axis=1)
         
-        gray =cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+       
 
-        ret, jpeg = cv2.imencode('.jpg', image)
+        ret, jpeg = cv2.imencode('.jpg', numpy_horizontal_concat)
         
         return jpeg.tobytes()
 VideoCamera()
