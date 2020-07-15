@@ -18,3 +18,8 @@ Then using victor manipulation algorithm, we can extract the information needed 
 Moving the robot head is based on the VR headset gyroscope sensor in order to get more accurate and fluid movement tracking the head of the human source and sending its orientation to the humanoid robot in order to re-act the movement. A normal camera in the robot head transfer the surrounding frame by frame to algorithm that takes single image and make it suitable to be shown in the VR headset that the human source is wearing. 
 
 ![robot2](https://user-images.githubusercontent.com/28588004/87577346-0e632880-c6d3-11ea-9cfa-5c22b7c63efb.gif)
+
+
+## Refrences 
+1- https://github.com/ildoonet/tf-pose-estimation
+2- https://github.com/DenisTome/Lifting-from-the-Deep-release
